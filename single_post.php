@@ -12,22 +12,18 @@
     <title><?php echo $post['title']?></title>
 </head>
 <body>
-
     <div class="navigation">
         <?php require_once 'includes/navigation.php'?>
     </div>
 
-
-    <div>
-        <?php echo $post['title']; ?>
+    <div class="container">
+        <div>
+            <?php echo "<h2>".$post['title']."</h2>"; ?>
+        </div>
+        <div>
+            <?php echo html_entity_decode($post['body']); ?>
+        </div>
     </div>
-
-    <div>
-        <?php echo html_entity_decode($post['body']); ?>
-    </div>
-
-<div class="footer">
-    <p>BlogTest &copy; <?php echo date('Y'); ?></p>
-</div>
+    <?php require_once 'includes/footer.php'?>
 </body>
 </html>
