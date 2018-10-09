@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+//session_start();
 try {
     $connect = mysqli_connect("localhost", "root", "", "blogtest");
     if (! $connect) {
@@ -8,7 +8,6 @@ try {
     }
 }
 catch(Exception $e){
-
     echo $e->getMessage();
 }
 
