@@ -4,6 +4,7 @@
     <?php require_once('config.php') ?>
     <?php require_once( ROOT_PATH . '/includes/public_functions.php') ?>
     <?php require_once 'includes/header.php'?>
+    <?php require_once 'includes/Dbs.php'?>
     <?php
         if(isset($_GET['post-slug'])) {
             $post = getPost($_GET['post-slug']);

@@ -1,5 +1,5 @@
 
-    <div class="footer ">
+    <div class="footer">
         <nav class="navbar navbar-dark bg-dark justify-content-center">
             <p style="color:white">BlogTest &copy; <?php echo date('Y'); ?></p>
         </nav>
