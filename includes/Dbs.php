@@ -89,7 +89,15 @@ class Dbs
     }
 
     public function getAllUsers(){
-        $query = $this->stmt->prepare('SELECT username, email FROM users');
+        $query = $this->stmt->prepare('SELECT username, email, role, DATE(created_at) AS created_at, 
+                            (SELECT COUNT(posts.id) FROM posts WHERE users.id = posts.user_id) AS amount FROM users');
+        $query->execute();
+        return $query->fetchAll();
+    }
+
+    public function getAllPosts(){
+        $query = $this->stmt->prepare('SELECT posts.title, posts.views, posts.published, 
+        DATE(posts.created_at) AS created_at, users.username FROM posts INNER JOIN users ON posts.user_id = users.id');
         $query->execute();
         return $query->fetchAll();
     }

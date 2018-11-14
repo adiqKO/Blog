@@ -32,6 +32,12 @@
                         case 'users':
                             require_once 'admin/usersManage.php';
                             break;
+                        case 'posts':
+                            require_once 'admin/postsManage.php';
+                            break;
+                        case 'create':
+                            require_once 'admin/createPost.php';
+                            break;
                     }
                 }
             ?>

@@ -5,8 +5,8 @@
                 Posty
             </button>
             <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                <a class="dropdown-item" href="#">Dodaj post</a>
-                <a class="dropdown-item" href="#">Zarządzaj postami</a>
+                <a class="dropdown-item" href="dashboard.php?page=create">Dodaj post</a>
+                <a class="dropdown-item" href="dashboard.php?page=posts">Zarządzaj postami</a>
             </div>
         </div>
         <div class="btn-group" role="group">

@@ -5,7 +5,7 @@
     }
 ?>
 
-<div class="col-sm-8 col-md-4 my-2">
+<div class="col-sm-12 col-md-4 my-3">
     <?php
         if(isset($_GET['error'])){
             require_once 'includes/alert.php';}
@@ -26,4 +26,10 @@
         </div>
         <button type="submit" class="btn btn-success btn-block" name="confirm">Zarejestruj</button>
     </form>
+</div>
+<div class="col-md-4 my-2 mx-auto text-center">
+    <img class=" w-50" src="static/images/plus.png">
+    <p class="my-3">Masz do wyboru dwa rodzaje uprawnień. Autor może tworzyć wpisy na blogu oraz tematy postów,
+        nie ma możliwości publikacji postów. Moderator może publikować oraz edytować posty.
+    </p>
 </div>

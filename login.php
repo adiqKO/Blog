@@ -29,4 +29,7 @@ if(isset($_POST['confirm'])) {
         header("Location: account.php?error=".$valid->getErrors()[0]);
     }
 
+}else{
+
+    header("Location: index.php");
 }
