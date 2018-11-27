@@ -1,6 +1,7 @@
 const btnLine = document.getElementById("addLine");
 const btn = document.getElementById("addText");
 const btnH = document.getElementById("addH");
+const btnVideo = document.getElementById("addVideo");
 let count = 0;
 
 
@@ -21,7 +22,6 @@ function addTestArea() {
     textArea.className = "form-control";
     acceptBtn.className = "mr-1";
     rejectBtn.addEventListener("click", function(){
-        console.log($(this).attr('id'));
         removeArea($(this).attr('id'));
     });
     divToBtn.append(acceptBtn,rejectBtn);
@@ -53,8 +53,21 @@ btn.addEventListener("click", function(){
     addTestArea();
 });
 
+btnVideo.addEventListener("click", function(){
+   const div = document.querySelector(".test");
+   const el = document.createElement("div");
+   const fr = document.createElement("iframe");
+   el.className = "col-lg-8 mx-auto embed-responsive embed-responsive-16by9";
+   fr.className = "embed-responsive-item";
+   fr.src = "https://www.youtube.com/embed/2i2khp_npdE";
+   fr.allowFullscreen = true;
+   el.appendChild(fr);
+   div.appendChild(el);
+});
+
+
 btnH.addEventListener("click", function(){
-    const div = document.getElementById("papa");
+    const div = document.querySelector(".test");
     const el = document.createElement("h2");
     el.innerText= "Do sedna";
     div.appendChild(el);
@@ -76,3 +89,6 @@ document.onmouseup = document.onkeyup = document.onselectionchange = function() 
     console.log(2);
 };
 
+//window.onbeforeunload = function() {
+ //   return 'Dialog text here.';
+//};
